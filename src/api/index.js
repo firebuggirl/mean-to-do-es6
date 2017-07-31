@@ -16,23 +16,18 @@ router.get('/todos', (req, res) => {
 });
 
 router.post('/todos', (req, res) => {
-  //let todo = req.body;
-  const todo = new Todo(req.body).save();
-  Todo.save(todo, (err, todo) => {
-    if (err) {
-      return res.status(500).json({message: err.message});
-    }
-    res.json({todo, message: 'Todo created'});
+
+  const todo = new Todo({ name: req.body.name, completed: req.body.completed });
+  todo.save().then(function(err, todo) {
+      console.log('Todo Created');
   });
-
-
-
   // Todo.save(todo, (err, todo) => {
   //   if (err) {
   //     return res.status(500).json({message: err.message});
   //   }
   //   res.json({todo, message: 'Todo created'});
   // });
+
 });
 
 router.put('/todos/:id', (req, res) => {

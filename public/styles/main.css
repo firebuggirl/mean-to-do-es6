@@ -1,5 +1,5 @@
 body {
-  color: #fff;
+  color: #f5e6b6;
   font-family: monospace;
   text-align: center;
   background: #32707d;
@@ -9,15 +9,20 @@ a {
   color: #3f8abf;
   text-decoration: none; }
   a:hover {
-    color: #65a1cc; }
+    color:  #ed5a5a; }
 
 .list {
   background: #fff;
-  width: 80%;
+  width: 90%;
+  line-height: 60px;
   min-width: 500px;
   margin: 80px auto 0;
   border-top: 40px solid #3d4246;
-  text-align: left; }
+  text-align: left;
+
+}
+
+
   .list .item {
     border-bottom: 2px solid #edeff0;
     padding: 17px 0 18px 17px;
@@ -85,6 +90,67 @@ nav ul li a {
   display: block;
   margin: 0;
   padding: 10px 15px;
-  color: #444;
-  background-color: #e1e8ea;
+  color: #e9ba1d;
+  background-color: #3d4246;
+}
+nav ul li a:hover{
+  color: #fff;
+}
+
+
+@media (max-width: 880px) {
+  .list {
+	background: #3D2117;
+	width: 90%;
+  min-width:  320px;
+	line-height: 60px;
+	margin: 80px auto 0;
+	border-top: 40px solid #3d4246;
+	text-align: left;
+}
+  .list.ng-scope{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 90%;
+      }
+   .list .item{
+     border-bottom: 4px solid #d9b215;
+     padding: 17px 0 18px 0px;
+     color: #e6dab2;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   input[type="checkbox"] + span {
+	   display: inline-block;
+	   width: 19px;
+	   height: 39px;
+	    margin: 20px 0px 0 0;
+	   /* vertical-align: middle; */
+	  background: url(checkbox-empty.svg) left top no-repeat;
+	  cursor: pointer;
+  }
+   .list .add{
+     padding: 25px 0 27px 0px;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     border-bottom: 3px solid #efb410;
+
+   }
+   .list .item label{
+     padding-left: 0px;
+     text-align: center;
+     line-height: 35px;
+     margin-top: 30px;
+     margin-bottom: 30px;
+   }
+   .list .item .actions{
+     margin-right: 0px;
+     float:none;
+   }
+   a{
+     color:#e3ddbd;
+   }
 }
