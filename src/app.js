@@ -15,4 +15,6 @@ app.use('/', express.static('public'));
 app.use(parser.json());
 app.use('/api', router);
 
-app.listen(3000, () => console.log("The server is running on port 3000!"));
+//'port' is for Heroku deploy
+//app.listen(3000 || port, () => console.log("The server is running on port 3000!"));
+app.listen(process.env.PORT || 3000, () => console.log("The server is running on port 3000!"));

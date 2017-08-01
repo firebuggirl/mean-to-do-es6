@@ -8,9 +8,7 @@
     "start": "nodemon --exec babel-node src/app.js",
     "build": "babel src -d lib",
     "debug": "babel-node-debug src/app.js"
-  
-
-  },
+    },
   "author": "",
   "license": "ISC",
   "dependencies": {
