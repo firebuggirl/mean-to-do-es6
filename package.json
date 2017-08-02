@@ -1,11 +1,15 @@
+
 {
   "name": "mean-todo-es6",
   "version": "1.0.0",
   "description": "",
   "main": "src/app.js",
+  "engines": {
+  "node": "6.9.5"
+},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node src/app.js",
+    "start": "node src/app.js",
     "build": "babel src -d lib",
     "debug": "babel-node-debug src/app.js"
     },

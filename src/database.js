@@ -3,8 +3,12 @@ const mongoose = require('mongoose');
 require('dotenv').config({ path: __dirname + '/../../variables.env' });
 
  let dbURI = process.env.DATABASE;
+
+ if (process.env.NODE_ENV === 'production') {
+ dbURI = process.env.MONGODB_URI;
+}
  mongoose.connect(dbURI);
-//mongoose.connect('mongodb://localhost/mean-todo-test');
+
 
 mongoose.connection.on('connected', () => {
   console.log(`Mongoose connected to ${dbURI}`);
